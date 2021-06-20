@@ -13,13 +13,14 @@ public class Retangulo {
 
     private double width;
     private double height;
-
+    
     /**
      * @param width the width to set
      */
     public void setWidth(double width) {
         this.width = width;
     }
+    
     /**
      * @param height the height to set
      */
