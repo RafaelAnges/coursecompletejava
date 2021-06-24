@@ -21,10 +21,10 @@ public class Conta {
     
 }
     
-    public Conta(int number, String holder, double balance){
+    public Conta(int number, String holder, double initialDeposit){
         this.number = number;
         this.holder = holder;
-       this.balance = balance ;
+        deposit(initialDeposit);
         
     }
 

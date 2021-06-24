@@ -24,15 +24,16 @@ public class Atividade05 {
         int number = sc.nextInt();
         
         System.out.println("Enter account holder: ");
-        String holder = sc.next();
+        sc.nextLine();
+        String holder = sc.nextLine();
         
         System.out.println("Is there na initial deposit (y/n)? ");
         char conf = sc.next().charAt(0);
         
         if (conf == 'y') {
             System.out.println("Enter initial deposit value: ");
-            double balance = sc.next().charAt(0);
-            conta = new Conta(number, holder, balance);
+            double initialDeposit = sc.nextDouble();
+            conta = new Conta(number, holder, initialDeposit);
         } else{
             conta = new Conta(number, holder);
         }
@@ -48,6 +49,7 @@ public class Atividade05 {
         System.out.println("Updated account data:\n");
         System.out.println(conta);
         
+        System.out.println();
         System.out.println("Enter a withdraw value: ");
         double withdrawValue = sc.nextDouble();
         conta.withdraw(withdrawValue);
